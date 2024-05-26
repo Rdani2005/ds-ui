@@ -1,1 +1,1 @@
-export { default } from "./devtools/eslint";
+module.exports = require("./devtools/eslint");
