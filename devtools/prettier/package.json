@@ -1,0 +1,7 @@
+{
+  "name": "@devtools/prettier",
+  "version": "1.0.0",
+  "description": "Formatter for JavaScript, TypeScript, CSS, and JSON",
+  "main": "./src/index.js",
+  "author": "Rdani2005"
+}
