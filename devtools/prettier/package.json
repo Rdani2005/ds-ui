@@ -2,6 +2,14 @@
   "name": "@devtools/prettier",
   "version": "1.0.0",
   "description": "Formatter for JavaScript, TypeScript, CSS, and JSON",
-  "main": "./src/index.js",
-  "author": "Rdani2005"
+  "main": "src/index.mjs",
+  "author": "Rdani2005",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  }
 }
