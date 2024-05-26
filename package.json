@@ -4,21 +4,22 @@
   "description": "Custom UI Packages for my apps",
   "author": "Rdani2005",
   "license": "MIT",
+  "type": "module",
   "engines": {
     "node": ">=20.x",
     "pnpm": ">=9.x"
   },
-  "type": "module",
   "workspaces": [
     "devtools/*",
     "packages/*"
   ],
   "scripts": {
+    "build": "pnpm run --recursive build",
     "storybook": "pnpm run --filter @devtools/storybook start",
     "test": "pnpm run --recursive test",
     "typecheck": "pnpm run --recursive typecheck",
     "format": "prettier --ignore-path .gitignore --write .",
-    "lint": "eslint --ignore-path.gitignore --max-warnings 0 \"**/*.{js,cjs,mjs,jsx,ts,tsx}\"",
+    "lint": "eslint --ignore-path .gitignore --max-warnings 0 \"**/*.{js,cjs,mjs,jsx,ts,tsx}\"",
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },
@@ -29,6 +30,10 @@
     "prettier": "^3.2.5",
     "typescript": "^5.4.5"
   },
+  "workspaces": [
+    "devtools/*",
+    "packages/*"
+  ],
   "lint-staged": {
     "*.{js,cjs,mjs,ts,jsx,tsx}": [
       "prettier --ignore-path .gitignore --write",

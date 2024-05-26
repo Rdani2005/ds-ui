@@ -25,4 +25,14 @@ module.exports = {
     "unused-imports/no-unused-imports": "error",
     "quote-props": ["error", "as-needed", { numbers: true }],
   },
+  overrides: [
+    {
+      // Disable file name case rule for Remix routes
+      // the rule gets in the way of the route naming convention of Remix.
+      files: ["apps/*/src/routes/**/*.tsx"],
+      rules: {
+        "unicorn/filename-case": "off",
+      },
+    },
+  ],
 };
