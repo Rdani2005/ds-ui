@@ -19,7 +19,7 @@
     "test": "pnpm run --recursive test",
     "typecheck": "pnpm run --recursive typecheck",
     "format": "prettier --ignore-path .gitignore --write .",
-    "lint": "eslint --ignore-path .gitignore --max-warnings 0 \"**/*.{js,cjs,mjs,jsx,ts,tsx}\"",
+    "lint": "eslint --ignore-pattern .gitignore --max-warnings 0 \"**/*.{js,cjs,mjs,jsx,ts,tsx}\"",
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },
@@ -37,7 +37,7 @@
   "lint-staged": {
     "*.{js,cjs,mjs,ts,jsx,tsx}": [
       "prettier --ignore-path .gitignore --write",
-      "eslint --ignore-path .gitignore --max-warnings 0"
+      "eslint --ignore-pattern .gitignore --max-warnings 0"
     ],
     "*.{json,md}": [
       "prettier --ignore-path .gitignore --write"
